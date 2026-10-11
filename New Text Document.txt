@@ -1,0 +1,19 @@
+en 
+
+conf t
+
+hostname CAIRO-ACCESS-SW3
+enable password cisco
+banner motd "no unauthorised access"
+username cisco password cisco
+ip domain-name cisco
+line console 0
+password cisco
+login
+exit
+ no ip domain-lookup
+service password-encryption
+
+do wr
+
+
