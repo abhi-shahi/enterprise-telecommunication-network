@@ -2,7 +2,7 @@ en
 
 conf t
 
-hostname CAIRO-ACCESS-SW3
+hostname CISCO-VOIP-ROUTER
 enable password cisco
 banner motd "no unauthorised access"
 username cisco password cisco
@@ -16,4 +16,43 @@ service password-encryption
 
 do wr
 
+
+
+!! vlan config in access switches
+
+vlan 50
+name LAN
+ vlan 60
+name WLAN
+vlan 101
+name VOIP
+
+int range fa0/3-11
+sw mo ac
+sw ac vlan 50
+sw voice vlan 101
+ex
+
+int fa0/12
+sw mo acc
+sw acc vlan 60
+ex
+
+vlan 50
+name LAN
+ vlan 60
+name WLAN
+vlan 101
+name VOIP
+
+int range fa0/13-23
+sw mo ac
+sw ac vlan 50
+sw voice vlan 101
+ex
+
+int fa0/24
+sw mo acc
+sw acc vlan 60
+ex
 
