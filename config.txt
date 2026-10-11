@@ -1,0 +1,14 @@
+1. NETwork design and beautification.
+2. Basic settings to all devices.
+3. Vlans (for wired, wireless and voice) assignment plus all access and trunk ports on l2 and l3 switches
+4. etherchannel,stp portfast and bpdu guard configs.
+5. Inter-vlan routing on the l3 switches plus IP dchp helper addresses.
+6. Static IP address to DMZ/server farm dervices.
+7. Dhcp server devices configurations.
+8. OSPF on the firewall, routers and switch
+9. firewall interface security zones and levels
+10. firewall inspection policy configuration
+11. Standard ACL for SSH
+12. WIRELESS network configurations
+13. telephony service configurations.
+14. verifying and testing configurations.
