@@ -56,3 +56,22 @@ sw mo acc
 sw acc vlan 60
 ex
 
+
+
+!!etherchannel,stp portfast and bpdu guard configs.
+
+int range fa0/1-2 
+channel-group 3 mode active
+exit
+
+int port-channel 3
+sw mo tr
+
+int range fa0/3-24
+spanning-tree portfast
+spanning-tree bpduguard enable
+ex
+do wr
+
+
+
